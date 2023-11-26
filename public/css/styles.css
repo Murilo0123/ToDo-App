@@ -129,23 +129,30 @@ main {
     color: var(--info-text-color);
 }
 
+<<<<<<< HEAD
 .informacoes .botoes {
     display: none;
 }
 
+=======
+>>>>>>> 01f5d3b7b090feed725e72ce528921c54b7921e4
 .botoes {
     padding-block: 1rem;
     background: var(--bg-tarefas);
     border-radius: 0.3125rem;
     margin-top: 1rem;
+<<<<<<< HEAD
     max-width: 33.75rem;
     margin-inline: auto;
 
+=======
+>>>>>>> 01f5d3b7b090feed725e72ce528921c54b7921e4
     display: flex;
     justify-content: center;
     gap: 1.2rem;
 
     font-size: 0.875rem;
+<<<<<<< HEAD
 }
 
 @media(min-width: 1000px) {
@@ -172,4 +179,6 @@ main {
     .tarefa:hover button {
         visibility: initial;
     }
+=======
+>>>>>>> 01f5d3b7b090feed725e72ce528921c54b7921e4
 }
