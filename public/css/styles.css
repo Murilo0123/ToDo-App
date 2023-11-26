@@ -12,8 +12,8 @@
     --input-color: #494C6B;
     --input-bg: #fff;
     --placeholder-color: #9495A5;
-    --button-color: #494C6B;
-    --buton-color-hover: #393A4B;
+    --button-color: #393A4B;
+    --buton-color-hover: #494C6B;
     --bg-body: #FAFAFA;
     --bg-tarefas: #fff;
     --box-shadow: 0px 35px 50px -15px rgba(194, 195, 214, 0.50);
@@ -68,6 +68,12 @@ header div div {
     justify-content: space-between;
 
     margin-bottom: 2.5rem;
+}
+
+header button {
+    background: none;
+    border: none;
+    cursor: pointer;
 }
 
 header div h1 {
