@@ -16,6 +16,33 @@ app.use(express.urlencoded({
 app.use(express.json())
 
 //rotas
+app.get('/limpartarefas', (requisicao, resposta) => {
+    const sql = 'delete  from tarefas'
+
+    conexao.query(sql, (erro) => {
+        if (erro) {
+            return console.log(erro);
+        }
+
+        resposta.redirect('/')
+    })
+})
+
+app.post('/excluir', (requisicao, resposta) => {
+    const id = requisicao.body.id
+
+    const sql = `
+    delete from tarefas
+    where id = ${id}`
+
+    conexao.query(sql, (erro) => {
+        if (erro) {
+            return console.log(erro);
+        }
+
+        resposta.redirect('/')
+    })
+})
 
 app.post('/completar', (requisicao, resposta) => {
     const id = requisicao.body.id
