@@ -15,7 +15,9 @@
                 </div>
                 {{/if}}
 
-                <button><img src="/imagens/x-icon.png" alt="ícone de X para excluir uma tarefa"></button>
+                <button onclick="excluirTarefa({{this.id}})">
+                    <img src="/imagens/x-icon.png" alt="ícone de X para excluir uma tarefa">
+                </button>
             </form>
         </div>
         {{/each}}
