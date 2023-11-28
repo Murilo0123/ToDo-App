@@ -16,6 +16,24 @@ app.use(express.urlencoded({
 app.use(express.json())
 
 //rotas
+
+app.post('/completar', (requisicao, resposta) => {
+    const id = requisicao.body.id
+
+    const sql = `
+    update tarefas
+    set completa = '1'
+    where id = ${id}`
+
+    conexao.query(sql, (erro) => {
+        if (erro) {
+            return console.log(erro);
+        }
+
+        resposta.redirect('/')
+    })
+})
+
 app.post("/criar", (requisicao, resposta) => {
     const descricao = requisicao.body.descricao
     const completa = 0
@@ -50,7 +68,7 @@ app.get('/', (requisicao, resposta) => {
             }
         })
 
-        resposta.render("home", { tarefas})
+        resposta.render("home", { tarefas })
     })
 })
 
