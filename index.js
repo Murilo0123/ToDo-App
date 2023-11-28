@@ -16,6 +16,7 @@ app.use(express.urlencoded({
 app.use(express.json())
 
 //rotas
+<<<<<<< HEAD
 app.get('/limpartarefas', (requisicao, resposta) => {
     const sql = 'delete  from tarefas'
 
@@ -28,6 +29,8 @@ app.get('/limpartarefas', (requisicao, resposta) => {
     })
 })
 
+=======
+>>>>>>> 2c068a41e9339c62dd5945ecb684d91d42d3efaf
 app.post('/excluir', (requisicao, resposta) => {
     const id = requisicao.body.id
 
